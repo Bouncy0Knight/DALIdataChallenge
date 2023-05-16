@@ -7,8 +7,11 @@ Following imputation via KNN, the code one-hot encodes the categorical values in
 The final function, plot centroids, plots the clustered observations against each other based on varying characteristics passed in. From this it is possible to make novel predictions about the dataset. For example: 
 
 0) the clustering suggests that as the median GPA increases, the chance that a class is an econ class decreases. 
+
 1)As the average section size decreases, the gpa of the class increases. 
+
 2)As the number of sections increases, the average section size increases. 
+
 3)The model predicts that low and high course numbers will have higher GPAs than intermediate course numbers
 
 
