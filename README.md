@@ -2,9 +2,14 @@
 
 I created a program that uses gower's distance as a metric to cluster the provided dataset. It first imputes the data through K - nearest neighbors twice - once for numerical data, and a second time for categorical data. The imputation steps are tested somewhat extensively through visual analysis. The final clusters allow us to make predictions about the inter-relations of varying dartmouth course factors. Note that this is an unsupervised clustering algorithm.
 
-The visual depictions and analyses went incredibly well - the imputations were very strongly supported by the distributions. The program is an unsupervised learning model, so next steps to improve would include training a supervised learning model from the clustering data to create novel predictions. This would make the predictions and analyses much more robust.
+Following imputation via KNN, the code one-hot encodes the categorical values in the dataset to allow us to implement a clustering algorithm. Before implementing the algorithm, we use the elbow method, which clusters the dataset 9 different times and stores the cost of each clustering attempt. By graphing the cost against the number of clusters, we can predict the optimal number of clusters as the location where the graph hits an inflection point. 
 
-I'm most proud of the imputation steps - I'm less experienced in that area, and it was gratifying to see it go so well. Accordingly, much of what I learned over this project is about the techniques and intuition necessary for conducting imputation.
+The final function, plot centroids, plots the clustered observations against each other based on varying characteristics passed in. From this it is possible to make novel predictions about the dataset. For example: 
+
+0) the clustering suggests that as the median GPA increases, the chance that a class is an econ class decreases. 
+1)As the average section size decreases, the gpa of the class increases. 
+2)As the number of sections increases, the average section size increases. 
+3)The model predicts that low and high course numbers will have higher GPAs than intermediate course numbers
 
 
 
